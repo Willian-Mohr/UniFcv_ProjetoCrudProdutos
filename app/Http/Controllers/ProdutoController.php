@@ -193,19 +193,19 @@ class ProdutoController extends Controller
         ];
 
         $produto10 = [
-            'descricao'   => 'Xiaomi Redmi not 10s 32g',
+            'descricao'   => 'Xiaomi Redmi note 10s 32g',
             'valor'       => '1359.90',
             'quantidade'  => '3',
             'slug'        => 'celular'
         ];
         $produto11 = [
-            'descricao'   => 'Xiaomi Redmi not 10s 64g',
+            'descricao'   => 'Xiaomi Redmi note 10s 64g',
             'valor'       => '1459.90',
             'quantidade'  => '6',
             'slug'        => 'celular'
         ];
         $produto12 = [
-            'descricao'   => 'Xiaomi Redmi not 10s 128g',
+            'descricao'   => 'Xiaomi Redmi note 10s 128g',
             'valor'       => '1559.90',
             'quantidade'  => '9',
             'slug'        => 'celular'
