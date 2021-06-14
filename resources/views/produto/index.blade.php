@@ -54,6 +54,9 @@
         @endforeach
       </table>
     </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <a href="/produto/alimentar" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="true">Click aqui para gerar massa de dados</a>
+    </div>
   </div>
   </div>
   </div>

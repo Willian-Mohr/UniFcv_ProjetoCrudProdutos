@@ -16,7 +16,7 @@ class ProdutoController extends Controller
     public function index()
     {
         $registro = null;
-        
+
         $registros = DB::table('produtos')->get();
 
 
@@ -131,6 +131,90 @@ class ProdutoController extends Controller
         if (DB::table('produtos')->where('id', $id)->delete()) {
             return redirect('produto')->with('mensagem', 'Excluido com sucesso!');
         }
-        
+    }
+
+    public function alimentar()
+    {
+        $produto1 = [
+            'descricao'   => 'Xiaomi Mi 9 32g',
+            'valor'       => '2359.90',
+            'quantidade'  => '3',
+            'slug'        => 'celular'
+        ];
+        $produto2 = [
+            'descricao'   => 'Xiaomi Mi 9 64g',
+            'valor'       => '2459.90',
+            'quantidade'  => '6',
+            'slug'        => 'celular'
+        ];
+        $produto3 = [
+            'descricao'   => 'Xiaomi Mi 9 128g',
+            'valor'       => '2559.90',
+            'quantidade'  => '9',
+            'slug'        => 'celular'
+        ];
+
+        $produto4 = [
+            'descricao'   => 'Xiaomi Mi 10 32g',
+            'valor'       => '3359.90',
+            'quantidade'  => '3',
+            'slug'        => 'celular'
+        ];
+        $produto5 = [
+            'descricao'   => 'Xiaomi Mi 10 64g',
+            'valor'       => '3459.90',
+            'quantidade'  => '6',
+            'slug'        => 'celular'
+        ];
+        $produto6 = [
+            'descricao'   => 'Xiaomi Mi 10 128g',
+            'valor'       => '3559.90',
+            'quantidade'  => '9',
+            'slug'        => 'celular'
+        ];
+
+        $produto7 = [
+            'descricao'   => 'Xiaomi Mi 11 32g',
+            'valor'       => '4359.90',
+            'quantidade'  => '3',
+            'slug'        => 'celular'
+        ];
+        $produto8 = [
+            'descricao'   => 'Xiaomi Mi 11 64g',
+            'valor'       => '4459.90',
+            'quantidade'  => '6',
+            'slug'        => 'celular'
+        ];
+        $produto9 = [
+            'descricao'   => 'Xiaomi Mi 11 128g',
+            'valor'       => '4559.90',
+            'quantidade'  => '9',
+            'slug'        => 'celular'
+        ];
+
+        $produto10 = [
+            'descricao'   => 'Xiaomi Redmi not 10s 32g',
+            'valor'       => '1359.90',
+            'quantidade'  => '3',
+            'slug'        => 'celular'
+        ];
+        $produto11 = [
+            'descricao'   => 'Xiaomi Redmi not 10s 64g',
+            'valor'       => '1459.90',
+            'quantidade'  => '6',
+            'slug'        => 'celular'
+        ];
+        $produto12 = [
+            'descricao'   => 'Xiaomi Redmi not 10s 128g',
+            'valor'       => '1559.90',
+            'quantidade'  => '9',
+            'slug'        => 'celular'
+        ];
+
+        $produtos = [$produto1, $produto2, $produto3, $produto4, $produto5, $produto6, $produto7, $produto8, $produto9, $produto10, $produto11, $produto12];
+
+        if (DB::table('produtos')->insert($produtos)) {
+            return redirect('produto')->with('mensagem', 'Massa de dados criada com sucesso!');
+        }
     }
 }

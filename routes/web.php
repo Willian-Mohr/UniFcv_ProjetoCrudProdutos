@@ -21,4 +21,5 @@ Route::post('/produto/salvar', [ProdutoController::class, 'store']);
 Route::get('/produto/editar/{id}', [ProdutoController::class, 'edit']);
 Route::post('/produto/gravar/{id}', [ProdutoController::class, 'update']);
 Route::get('/produto/apagar/{id}', [ProdutoController::class, 'destroy']);
+Route::get('/produto/alimentar', [ProdutoController::class, 'alimentar']);
 Route::get('/produto/{id}', [ProdutoController::class, 'show']);
